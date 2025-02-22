@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Booking(models.Model):
-    # ID field (integer with a limit of 11 digits)
-    id = models.IntegerField(11)
+    # ID field (automatically included as the primary key)
+    id = models.AutoField(primary_key=True)
     # Name of the booking (max length of 255 characters)
     name = models.CharField(max_length=255)
     # Number of guests (integer with a limit of 6 digits)
@@ -15,8 +15,8 @@ class Booking(models.Model):
         return f"Booking for {self.name} on {self.booking_date}"
 
 class Menu(models.Model):
-    # ID field (integer with a limit of 5 digits)
-    id = models.IntegerField(5)
+    # ID field (automatically included as the primary key)
+    id = models.AutoField(primary_key=True)
     # Title of the menu item (max length of 255 characters)
     title = models.CharField(max_length=255)
     # Price of the menu item (decimal with 10 digits, 2 after the decimal point)

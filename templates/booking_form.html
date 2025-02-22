@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create New Booking</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="no_of_guests">Number of Guests</label>
+        <input type="number" id="no_of_guests" name="no_of_guests" required>
+        <label for="booking_date">Booking Date</label>
+        <input type="datetime-local" id="booking_date" name="booking_date" required>
+        <button type="submit">Create Booking</button>
+    </form>
+</body>
+</html>

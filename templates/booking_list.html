@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Booking List</h1>
+    <ul>
+        {% for booking in bookings %}
+            <li><a href="{% url 'booking_detail' booking.id %}">{{ booking.name }} - {{ booking.booking_date }}</a></li>
+        {% endfor %}
+    </ul>
+<a href="{% url 'booking_create' %}">Create new booking</a>
+</body>
+</html>
+
+
+
