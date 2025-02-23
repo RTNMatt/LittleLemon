@@ -26,3 +26,4 @@ class Menu(models.Model):
     # Optionally, define a string representation for the model
     def __str__(self):
         return f"{self.title} - ${self.price}"
+

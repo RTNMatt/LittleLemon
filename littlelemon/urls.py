@@ -28,4 +28,6 @@ urlpatterns = [
     path('api/', include(router.urls)),  # DRF router for viewsets
     path('restaurant/', include('restaurant.urls')),  # Includes app-level URLs
     path('restaurant/booking/', include(router.urls)),
+    path('auth/', include('djoser.urls')),  # Djoser authentication URLs
+    path('auth/', include('djoser.urls.authtoken')),  # Djoser token URLs
 ]
