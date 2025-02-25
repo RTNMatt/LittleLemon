@@ -25,5 +25,6 @@ class Menu(models.Model):
     inventory = models.PositiveIntegerField()
     # Optionally, define a string representation for the model
     def __str__(self):
-        return f"{self.title} - ${self.price}"
+        #return f"{self.title} - ${self.price}" updated as per exercise for Unit Testing
+        return f"{self.title} : {self.price:.2f}"
 
