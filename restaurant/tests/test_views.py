@@ -63,7 +63,7 @@ class BookingViewSetTest(TestCase):
 
         # Create booking
         self.booking = Booking.objects.create(name="John Doe", no_of_guests=4)
-        self.booking_url = "/restaurant/tables/"  # Update with actual endpoint
+        self.booking_url = "/restaurant/tables/"
 
     def test_get_all_bookings(self):
         """Test retrieving all bookings."""
